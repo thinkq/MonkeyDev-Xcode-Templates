@@ -22,7 +22,7 @@
 				<key>LD_RUNPATH_SEARCH_PATHS</key>
 				<string>$(inherited) @executable_path/Frameworks</string>
 				<key>OTHER_LDFLAGS</key>
-				<string>$(inherited)  -weak_library /usr/lib/libc++.dylib -weak_library /usr/lib/libc++.dylib -weak_library $(MonkeyDevPath)/Frameworks/libsubstrate.dylib</string>
+				<string>$(inherited) -weak_library $(MonkeyDevPath)/Frameworks/libsubstrate.dylib</string>
 				<key>ENABLE_BITCODE</key>
 				<string>NO</string>
 				<key>PRODUCT_NAME</key>
@@ -94,9 +94,11 @@
 			<key>MonkeyDevPath</key>
 			<string>/opt/MonkeyDev</string>
 			<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-			<string>8.0</string>
+			<string>9.0</string>
 			<key>FRAMEWORK_SEARCH_PATHS</key>
 			<string>$(inherited) $(MonkeyDevPath)/Frameworks/** $(MonkeyDevPath)/Librarys/** $(MonkeyDevTheosPath)/vendor/lib</string>
+			<key>ENABLE_USER_SCRIPT_SANDBOXING</key>
+			<string>NO</string>
 		</dict>
 		<key>SDK</key>
 		<string>iphoneos</string>
@@ -105,7 +107,7 @@
 			<key>Debug</key>
 			<dict>
 				<key>OTHER_LDFLAGS</key>
-				<string>$(inherited)  -weak_library /usr/lib/libc++.dylib -weak_library /usr/lib/libc++.dylib -weak_library $(MonkeyDevPath)/Frameworks/libsubstrate.dylib -lcycript -framework RevealServer</string>
+				<string>$(inherited) -weak_library $(MonkeyDevPath)/Frameworks/libsubstrate.dylib -lcycript -framework RevealServer</string>
 				<key>VALIDATE_PRODUCT</key>
 				<string>NO</string>
 				<key>GCC_OPTIMIZATION_LEVEL</key>
